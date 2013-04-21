@@ -2,14 +2,16 @@
 #include <QApplication>
 #include <QTextCodec>
 
+
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
     Widget w;
-    w.setWindowFlags(Qt::FramelessWindowHint);
-    QTextCodec *codec = QTextCodec::codecForName("GB2312");
 
+    QTextCodec *codec = QTextCodec::codecForName("GB2312");
     QTextCodec::setCodecForLocale(codec);
+    QTextCodec::setCodecForCStrings(codec);
+    QTextCodec::setCodecForTr(codec);
     w.setWindowFlags(Qt::FramelessWindowHint);
     w.show();
     
