@@ -44,7 +44,7 @@ void Updater::run()
         this->ui->label_time->setText(str);
 
         //date
-        str = time.toString("yyyy-MM-dd");
+        str = time.toString("yyyy/MM/dd");
         this->ui->label_date->setText(str);
 
 
