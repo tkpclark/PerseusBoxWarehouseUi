@@ -59,16 +59,19 @@ void Updater::run()
         this->ui->label_mac->setText(str);
 
         str = getFileContent("../disp/vai");
-        this->ui->label_vai->setText(str);
+        this->ui->label_vai->setText("AI:"+str);
 
         str = getFileContent("../disp/vud");
-        this->ui->label_vud->setText(str);
+        this->ui->label_vud->setText("UD:"+str);
 
         str = getFileContent("../disp/vul");
-        this->ui->label_vul->setText(str);
+        this->ui->label_vul->setText("UL:"+str);
 
         str = getFileContent("../disp/box_id");
         this->ui->label_boxid->setText(str);
+
+        str = getFileContent("../disp/upload");
+        this->ui->label_ftp->setText(str);
 
         str = getFileContent("../disp/install_seq");
         this->ui->label_installnum->setText(str);
