@@ -25,56 +25,6 @@
    <property name="styleSheet">
     <string notr="true">background-color:rgb(30,30,30)</string>
    </property>
-   <widget class="QWidget" name="widget_2" native="true">
-    <property name="geometry">
-     <rect>
-      <x>6</x>
-      <y>6</y>
-      <width>789</width>
-      <height>45</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color:rgb(40,40,40)</string>
-    </property>
-    <widget class="QLabel" name="label_boxid">
-     <property name="geometry">
-      <rect>
-       <x>510</x>
-       <y>20</y>
-       <width>271</width>
-       <height>16</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">color:rgb(252, 254, 253);
-font: 9pt &quot;Lucida Grande&quot;;</string>
-     </property>
-     <property name="text">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_mac_2">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>10</y>
-       <width>101</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">color:rgb(252, 254, 253);
-font: 75 italic 16pt &quot;Courier&quot;;</string>
-     </property>
-     <property name="text">
-      <string>Perseus</string>
-     </property>
-    </widget>
-   </widget>
    <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
@@ -315,7 +265,7 @@ font: 9pt &quot;Lucida Grande&quot;;</string>
        <property name="styleSheet">
         <string notr="true">background-color:rgb(50,50,50)</string>
        </property>
-       <widget class="QWidget" name="">
+       <widget class="QWidget" name="layoutWidget">
         <property name="geometry">
          <rect>
           <x>50</x>
@@ -329,7 +279,7 @@ font: 9pt &quot;Lucida Grande&quot;;</string>
           <widget class="QLabel" name="label_vai">
            <property name="styleSheet">
             <string notr="true">color:rgb(252, 254, 253);
-font: 11pt &quot;Courier&quot;;</string>
+font: 9pt &quot;Lucida Grande&quot;;</string>
            </property>
            <property name="text">
             <string/>
@@ -343,7 +293,7 @@ font: 11pt &quot;Courier&quot;;</string>
           <widget class="QLabel" name="label_vud">
            <property name="styleSheet">
             <string notr="true">color:rgb(252, 254, 253);
-font: 11pt &quot;Courier&quot;;</string>
+font: 9pt &quot;Lucida Grande&quot;;</string>
            </property>
            <property name="text">
             <string/>
@@ -357,7 +307,7 @@ font: 11pt &quot;Courier&quot;;</string>
           <widget class="QLabel" name="label_vul">
            <property name="styleSheet">
             <string notr="true">color:rgb(252, 254, 253);
-font: 11pt &quot;Courier&quot;;</string>
+font: 9pt &quot;Lucida Grande&quot;;</string>
            </property>
            <property name="text">
             <string/>
@@ -374,10 +324,10 @@ font: 11pt &quot;Courier&quot;;</string>
            </property>
            <property name="styleSheet">
             <string notr="true">color:rgb(252, 254, 253);
-font: 11pt &quot;Courier&quot;;</string>
+font: 9pt &quot;Lucida Grande&quot;;</string>
            </property>
            <property name="text">
-            <string>UI:0.22</string>
+            <string>UI:0.23</string>
            </property>
            <property name="alignment">
             <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -390,8 +340,43 @@ font: 11pt &quot;Courier&quot;;</string>
      </item>
     </layout>
    </widget>
-   <zorder>layoutWidget</zorder>
-   <zorder>widget_2</zorder>
+   <widget class="QLabel" name="label_logo">
+    <property name="geometry">
+     <rect>
+      <x>15</x>
+      <y>10</y>
+      <width>101</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:rgb(252, 254, 253);
+font: 75 italic 16pt &quot;Courier&quot;;</string>
+    </property>
+    <property name="text">
+     <string>Perseus</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_boxid">
+    <property name="geometry">
+     <rect>
+      <x>640</x>
+      <y>22</y>
+      <width>151</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:rgb(252, 254, 253);
+font: 9pt &quot;Lucida Grande&quot;;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+   </widget>
   </widget>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
