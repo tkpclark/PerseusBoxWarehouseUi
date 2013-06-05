@@ -20,3 +20,5 @@ HEADERS  += widget.h \
     updater.h
 
 FORMS    += widget.ui
+
+RESOURCES +=

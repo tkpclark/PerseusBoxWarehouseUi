@@ -32,10 +32,55 @@ QString Updater::getFileContent(QString filename)
     return data;
 }
 
+bool Updater::isSdcardInserted()
+{
+    QFile f("/dev/sdcard");
+    //qDebug() << filename ;
+    if(!f.open(QIODevice::ReadOnly ))
+    {
+        qDebug() << "sdcard doesn't insert!\n";
+        return false;
+    }
+    else
+    {
+        f.close();
+        qDebug() << "sdcard inserted!\n";
+        return true;
+    }
+
+    //qDebug() << f.readLine() << '\n';
+
+}
+
 void Updater::run()
 {
     QDateTime time;
     QString str;
+
+    /*
+    QString base_dir="/Users/clark/work/ww/perseus/ui_src/pics/";
+
+    this->ui->label_pic_home->setPixmap(QPixmap(base_dir + "home.png"));
+    this->ui->label_pic_phone->setPixmap(QPixmap(base_dir + "phone.png"));
+    this->ui->label_pic_time->setPixmap(QPixmap(base_dir + "time.png"));
+
+    if(this->isSdcardInserted())
+        this->ui->label_pic_sd->setPixmap(QPixmap(base_dir + "sd_in.png"));
+    else
+        this->ui->label_pic_sd->setPixmap(QPixmap(base_dir + "sd_out.png"));
+    */
+
+
+    this->ui->label_pic_home->setPixmap(QPixmap(":/pics/home.png"));
+    this->ui->label_pic_phone->setPixmap(QPixmap(":/pics/phone.png"));
+    this->ui->label_pic_time->setPixmap(QPixmap(":/pics/time.png"));
+
+    if(this->isSdcardInserted())
+        this->ui->label_pic_sd->setPixmap(QPixmap(":/pics/sd_in.png"));
+    else
+        this->ui->label_pic_sd->setPixmap(QPixmap(":/pics/sd_out.png"));
+
+
     while(1)
     {
         //time
