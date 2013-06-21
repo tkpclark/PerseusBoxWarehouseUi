@@ -12,7 +12,7 @@ public:
     explicit Updater(QObject *parent = 0);
     void setup_ui(Ui::Widget *ui);
     QString getFileContent(QString filename);
-    bool isSdcardInserted();
+
 signals:
     
 public slots:

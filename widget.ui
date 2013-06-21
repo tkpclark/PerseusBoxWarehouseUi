@@ -50,73 +50,70 @@
      <property name="spacing">
       <number>6</number>
      </property>
-     <item row="2" column="3" colspan="2">
-      <widget class="QWidget" name="widget_15" native="true">
+     <item row="2" column="1" colspan="2">
+      <widget class="QWidget" name="widget_16" native="true">
        <property name="styleSheet">
-        <string notr="true">background-color:rgb(230,90,0)</string>
+        <string notr="true">background-color:rgb(120,0,0)</string>
        </property>
-       <widget class="QLabel" name="label_8">
+       <widget class="QWidget" name="layoutWidget">
         <property name="geometry">
          <rect>
-          <x>90</x>
-          <y>30</y>
-          <width>81</width>
-          <height>41</height>
+          <x>110</x>
+          <y>40</y>
+          <width>191</width>
+          <height>42</height>
          </rect>
         </property>
-        <property name="styleSheet">
-         <string notr="true">color:rgb(242, 251, 245);
-font: 15pt &quot;Lucida Grande&quot;;</string>
-        </property>
-        <property name="text">
-         <string>安装量</string>
-        </property>
+        <layout class="QVBoxLayout" name="verticalLayout">
+         <item>
+          <widget class="QLabel" name="label_ip">
+           <property name="styleSheet">
+            <string notr="true">color:rgb(252, 254, 253);
+font: 9pt &quot;Lucida Grande&quot;;</string>
+           </property>
+           <property name="text">
+            <string>00:00:00:00:00:00</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_mac">
+           <property name="styleSheet">
+            <string notr="true">color:rgb(252, 254, 253);
+font: 9pt &quot;Lucida Grande&quot;;</string>
+           </property>
+           <property name="text">
+            <string>0.0.0.0</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
        </widget>
-       <widget class="QLabel" name="label_installnum">
-        <property name="geometry">
-         <rect>
-          <x>180</x>
-          <y>50</y>
-          <width>131</width>
-          <height>51</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">color:rgb(252, 254, 253);
-font: 30pt &quot;Lucida Grande&quot;;</string>
-        </property>
-        <property name="text">
-         <string/>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_pic_phone">
+       <widget class="QLabel" name="label_network">
         <property name="geometry">
          <rect>
           <x>20</x>
-          <y>20</y>
+          <y>10</y>
           <width>62</width>
-          <height>51</height>
+          <height>81</height>
          </rect>
         </property>
         <property name="text">
-         <string/>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
         </property>
        </widget>
       </widget>
      </item>
-     <item row="0" column="0">
-      <widget class="QWidget" name="widget_3" native="true">
+     <item row="1" column="3">
+      <widget class="QWidget" name="widget_10" native="true">
        <property name="styleSheet">
-        <string notr="true">background-color:rgb(32,170,212)</string>
+        <string notr="true">background-color:rgb(0,70,20)</string>
        </property>
-       <widget class="QLabel" name="label_pic_home">
+       <widget class="QLabel" name="label_pic_sd">
         <property name="geometry">
          <rect>
-          <x>48</x>
-          <y>20</y>
+          <x>49</x>
+          <y>12</y>
           <width>62</width>
           <height>51</height>
          </rect>
@@ -124,8 +121,79 @@ font: 30pt &quot;Lucida Grande&quot;;</string>
         <property name="text">
          <string/>
         </property>
+       </widget>
+      </widget>
+     </item>
+     <item row="0" column="1" rowspan="2" colspan="2">
+      <widget class="QWidget" name="widget_4" native="true">
+       <property name="styleSheet">
+        <string notr="true">background-color:rgb(208,33,29)</string>
+       </property>
+       <widget class="QLabel" name="label_info">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>80</y>
+          <width>291</width>
+          <height>161</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Lucida Grande</family>
+          <pointsize>9</pointsize>
+          <weight>50</weight>
+          <italic>false</italic>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="contextMenuPolicy">
+         <enum>Qt::DefaultContextMenu</enum>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color:rgb(252, 254, 253);
+font: 9pt &quot;Lucida Grande&quot;;</string>
+        </property>
+        <property name="text">
+         <string>启动中...</string>
+        </property>
         <property name="alignment">
-         <set>Qt::AlignCenter</set>
+         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+        </property>
+        <property name="wordWrap">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_ftp">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>253</y>
+          <width>201</width>
+          <height>27</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color:rgb(242, 251, 249);font: 6pt &quot;Courier&quot;;</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_info_2">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>10</y>
+          <width>71</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/pics/infor.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
         </property>
        </widget>
       </widget>
@@ -191,7 +259,7 @@ font: 9pt &quot;Lucida Grande&quot;;</string>
          </rect>
         </property>
         <property name="text">
-         <string/>
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/pics/time.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
@@ -199,77 +267,73 @@ font: 9pt &quot;Lucida Grande&quot;;</string>
        </widget>
       </widget>
      </item>
-     <item row="0" column="1" rowspan="2" colspan="2">
-      <widget class="QWidget" name="widget_4" native="true">
+     <item row="0" column="0">
+      <widget class="QWidget" name="widget_3" native="true">
        <property name="styleSheet">
-        <string notr="true">background-color:rgb(208,33,29)</string>
+        <string notr="true">background-color:rgb(32,170,212)</string>
        </property>
-       <widget class="QLabel" name="label_info">
+       <widget class="QLabel" name="label_pic_home">
         <property name="geometry">
          <rect>
-          <x>10</x>
-          <y>50</y>
-          <width>291</width>
-          <height>191</height>
+          <x>48</x>
+          <y>10</y>
+          <width>62</width>
+          <height>51</height>
          </rect>
         </property>
-        <property name="font">
-         <font>
-          <family>Lucida Grande</family>
-          <pointsize>9</pointsize>
-          <weight>50</weight>
-          <italic>false</italic>
-          <bold>false</bold>
-         </font>
-        </property>
-        <property name="contextMenuPolicy">
-         <enum>Qt::DefaultContextMenu</enum>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">color:rgb(252, 254, 253);
-font: 9pt &quot;Lucida Grande&quot;;</string>
-        </property>
         <property name="text">
-         <string>启动中...</string>
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/pics/home.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
         </property>
         <property name="alignment">
-         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
-        </property>
-        <property name="wordWrap">
-         <bool>true</bool>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_ftp">
-        <property name="geometry">
-         <rect>
-          <x>10</x>
-          <y>253</y>
-          <width>201</width>
-          <height>27</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">color:rgb(242, 251, 249);font: 6pt &quot;Courier&quot;;</string>
-        </property>
-        <property name="text">
-         <string/>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
+         <set>Qt::AlignCenter</set>
         </property>
        </widget>
       </widget>
      </item>
-     <item row="1" column="3">
-      <widget class="QWidget" name="widget_10" native="true">
+     <item row="2" column="3" colspan="2">
+      <widget class="QWidget" name="widget_15" native="true">
        <property name="styleSheet">
-        <string notr="true">background-color:rgb(0,70,20)</string>
+        <string notr="true">background-color:rgb(230,90,0)</string>
        </property>
-       <widget class="QLabel" name="label_pic_sd">
+       <widget class="QLabel" name="label_8">
         <property name="geometry">
          <rect>
-          <x>49</x>
-          <y>12</y>
+          <x>90</x>
+          <y>30</y>
+          <width>81</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color:rgb(242, 251, 245);
+font: 15pt &quot;Lucida Grande&quot;;</string>
+        </property>
+        <property name="text">
+         <string>安装量</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_installnum">
+        <property name="geometry">
+         <rect>
+          <x>180</x>
+          <y>50</y>
+          <width>131</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color:rgb(252, 254, 253);
+font: 30pt &quot;Lucida Grande&quot;;</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_pic_phone">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>20</y>
           <width>62</width>
           <height>51</height>
          </rect>
@@ -277,47 +341,22 @@ font: 9pt &quot;Lucida Grande&quot;;</string>
         <property name="text">
          <string/>
         </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
        </widget>
-      </widget>
-     </item>
-     <item row="2" column="1" colspan="2">
-      <widget class="QWidget" name="widget_16" native="true">
-       <property name="styleSheet">
-        <string notr="true">background-color:rgb(120,0,0)</string>
-       </property>
-       <widget class="QWidget" name="layoutWidget">
+       <widget class="QLabel" name="label_installnum_2">
         <property name="geometry">
          <rect>
-          <x>110</x>
-          <y>40</y>
-          <width>191</width>
-          <height>42</height>
+          <x>20</x>
+          <y>20</y>
+          <width>62</width>
+          <height>71</height>
          </rect>
         </property>
-        <layout class="QVBoxLayout" name="verticalLayout">
-         <item>
-          <widget class="QLabel" name="label_ip">
-           <property name="styleSheet">
-            <string notr="true">color:rgb(252, 254, 253);
-font: 9pt &quot;Lucida Grande&quot;;</string>
-           </property>
-           <property name="text">
-            <string>00:00:00:00:00:00</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="label_mac">
-           <property name="styleSheet">
-            <string notr="true">color:rgb(252, 254, 253);
-font: 9pt &quot;Lucida Grande&quot;;</string>
-           </property>
-           <property name="text">
-            <string>0.0.0.0</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/pics/phone.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
        </widget>
       </widget>
      </item>
@@ -330,7 +369,7 @@ font: 9pt &quot;Lucida Grande&quot;;</string>
         <property name="geometry">
          <rect>
           <x>50</x>
-          <y>51</y>
+          <y>100</y>
           <width>71</width>
           <height>91</height>
          </rect>
@@ -396,6 +435,22 @@ font: 9pt &quot;Lucida Grande&quot;;</string>
           </widget>
          </item>
         </layout>
+       </widget>
+       <widget class="QLabel" name="label_version">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>10</y>
+          <width>62</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
        </widget>
       </widget>
      </item>

@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/">
+        <file>pics/home.png</file>
+        <file>pics/infor.png</file>
+        <file>pics/inter_off.png</file>
+        <file>pics/inter_on.png</file>
+        <file>pics/phone.png</file>
+        <file>pics/sd_in.png</file>
+        <file>pics/sd_out.png</file>
+        <file>pics/time.png</file>
+    </qresource>
+</RCC>

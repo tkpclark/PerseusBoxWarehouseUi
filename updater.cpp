@@ -4,7 +4,7 @@
 #include <QFile>
 #include <QTextStream>
 #include <QDebug>
-
+#include <QDir>
 Updater::Updater(QObject *parent) :
     QThread(parent)
 {
@@ -32,25 +32,7 @@ QString Updater::getFileContent(QString filename)
     return data;
 }
 
-bool Updater::isSdcardInserted()
-{
-    QFile f("/dev/sdcard");
-    //qDebug() << filename ;
-    if(!f.open(QIODevice::ReadOnly ))
-    {
-        qDebug() << "sdcard doesn't insert!\n";
-        return false;
-    }
-    else
-    {
-        f.close();
-        qDebug() << "sdcard inserted!\n";
-        return true;
-    }
 
-    //qDebug() << f.readLine() << '\n';
-
-}
 
 void Updater::run()
 {
@@ -71,14 +53,19 @@ void Updater::run()
     */
 
 
-    this->ui->label_pic_home->setPixmap(QPixmap(":/pics/home.png"));
-    this->ui->label_pic_phone->setPixmap(QPixmap(":/pics/phone.png"));
-    this->ui->label_pic_time->setPixmap(QPixmap(":/pics/time.png"));
+   // this->ui->label_pic_home->setPixmap(QPixmap(":/pics/home.png"));
+   // this->ui->label_pic_phone->setPixmap(QPixmap(":/pics/phone.png"));
+   // this->ui->label_pic_time->setPixmap(QPixmap(":/pics/time.png"));
 
-    if(this->isSdcardInserted())
-        this->ui->label_pic_sd->setPixmap(QPixmap(":/pics/sd_in.png"));
-    else
-        this->ui->label_pic_sd->setPixmap(QPixmap(":/pics/sd_out.png"));
+
+    //if(this->isSdcardInserted())
+    /*
+
+    */
+
+  //  this->ui->label_pic_sd->setStyleSheet("background-image: url(:/pics/home.png);");
+
+    //QDir dir;
 
 
     while(1)
@@ -124,6 +111,8 @@ void Updater::run()
         str = getFileContent("../disp/box_status");
         //str = getFileContent("/Users/clark/tmp/box_status");
         this->ui->label_info->setText(str);
+
+        // qDebug() << "dir: "<<dir.currentPath()  << "\n"
 
 
         sleep(1);
