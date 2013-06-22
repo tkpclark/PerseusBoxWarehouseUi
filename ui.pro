@@ -4,13 +4,12 @@
 #
 #-------------------------------------------------
 
+QT += network
 
 SOURCES += main.cpp\
-        widget.cpp \
-    updater.cpp
+        widget.cpp
 
-HEADERS  += widget.h \
-    updater.h
+HEADERS  += widget.h
 
 FORMS    += widget.ui
 
