@@ -57,12 +57,12 @@ void Widget::updateNetworkDisplay()
     tcpSocket.connectToHost("202.85.215.135", 21);
     if(tcpSocket.waitForConnected(300))
     {
-        qDebug() << "set network ok";
+        //qDebug() << "set network ok";
         this->ui->label_network->setStyleSheet("background-image: url(:/pics/inter_on.png);");
     }
     else
     {
-        qDebug() << "set network failed";
+        //qDebug() << "set network failed";
         this->ui->label_network->setStyleSheet("background-image: url(:/pics/inter_off.png);");
     }
     tcpSocket.close();
@@ -140,13 +140,13 @@ bool Widget::isSdcardInserted()
     //qDebug() << filename ;
     if(!f.open(QIODevice::ReadOnly ))
     {
-        qDebug() << "sdcard doesn't insert!\n";
+        //qDebug() << "sdcard doesn't insert!\n";
         return false;
     }
     else
     {
         f.close();
-        qDebug() << "sdcard inserted!\n";
+        //qDebug() << "sdcard inserted!\n";
         return true;
     }
 
