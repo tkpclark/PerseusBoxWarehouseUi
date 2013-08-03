@@ -427,7 +427,7 @@ font: 9pt &quot;Lucida Grande&quot;;</string>
 font: 9pt &quot;Lucida Grande&quot;;</string>
            </property>
            <property name="text">
-            <string>UI:0.23</string>
+            <string>UI:0.24</string>
            </property>
            <property name="alignment">
             <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
