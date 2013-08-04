@@ -8,5 +8,6 @@
         <file>pics/sd_in.png</file>
         <file>pics/sd_out.png</file>
         <file>pics/time.png</file>
+        <file>pics/moveon.png</file>
     </qresource>
 </RCC>

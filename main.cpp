@@ -1,13 +1,12 @@
-#include "widget.h"
+#include "updatewidget.h"
 #include <QApplication>
 #include <QTextCodec>
 #include <QResource>
 
-
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    Widget w;
+
 
 
     QTextCodec *codec = QTextCodec::codecForName("GB2312");
@@ -17,8 +16,16 @@ int main(int argc, char *argv[])
 
    // QResource::registerResource("/Users/clark/work/ww/perseus/ui_src/pics/pics.qrc");
     QResource::registerResource("../pics/pics.qrc");
+
+    /*
+    Widget w;
     w.setWindowFlags(Qt::FramelessWindowHint);
     w.show();
-    
+    */
+
+    UpdateWidget uw;
+    uw.setWindowFlags(Qt::FramelessWindowHint);
+    uw.show();
+
     return a.exec();
 }

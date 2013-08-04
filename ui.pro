@@ -7,11 +7,14 @@
 QT += network
 
 SOURCES += main.cpp\
-        widget.cpp
+        widget.cpp \
+    updatewidget.cpp
 
-HEADERS  += widget.h
+HEADERS  += widget.h \
+    updatewidget.h
 
-FORMS    += widget.ui
+FORMS    += widget.ui \
+    updatewidget.ui
 
 RESOURCES += \
     pics.qrc

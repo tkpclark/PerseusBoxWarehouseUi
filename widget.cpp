@@ -58,12 +58,12 @@ void Widget::updateNetworkDisplay()
     if(tcpSocket.waitForConnected(300))
     {
         //qDebug() << "set network ok";
-        this->ui->label_network->setStyleSheet("background-image: url(:/pics/inter_on.png);");
+        this->ui->label_network->setStyleSheet("background-image: url(:/pics/inter_on.png);background-repeat:no-repeat;");
     }
     else
     {
         //qDebug() << "set network failed";
-        this->ui->label_network->setStyleSheet("background-image: url(:/pics/inter_off.png);");
+        this->ui->label_network->setStyleSheet("background-image: url(:/pics/inter_off.png);background-repeat:no-repeat;");
     }
     tcpSocket.close();
 }
@@ -73,11 +73,11 @@ void Widget::updateSDcardDisplay()
     //ui->label_pic_sd->setStyleSheet("background-image: url(:/pics/home.png);");
     if(this->isSdcardInserted())
     {
-        this->ui->label_pic_sd->setStyleSheet("background-image: url(:/pics/sd_in.png);");
+        this->ui->label_pic_sdcard->setStyleSheet("background-image: url(:/pics/sd_in.png);background-repeat:no-repeat;");
     }
     else
     {
-        this->ui->label_pic_sd->setStyleSheet("background-image: url(:/pics/sd_out.png);");
+        this->ui->label_pic_sdcard->setStyleSheet("background-image: url(:/pics/sd_out.png);background-repeat:no-repeat;");
     }
 }
 
@@ -92,12 +92,8 @@ void Widget::updateDisplay()
 
     //time
     time = QDateTime::currentDateTime();
-    str = time.toString("hh:mm:ss");
+    str = time.toString("yyyy/MM/dd hh:mm:ss");
     this->ui->label_time->setText(str);
-
-    //date
-    str = time.toString("yyyy/MM/dd");
-    this->ui->label_date->setText(str);
 
 
     //str = getFileContent("/Users/clark/work/ww/perseus/ui_src/disp/ip");
@@ -110,6 +106,7 @@ void Widget::updateDisplay()
     str = getFileContent("../disp/mac");
     this->ui->label_mac->setText(str);
 
+    /*
     str = getFileContent("../disp/vai");
     this->ui->label_vai->setText("AI:"+str);
 
@@ -118,9 +115,13 @@ void Widget::updateDisplay()
 
     str = getFileContent("../disp/vul");
     this->ui->label_vul->setText("UL:"+str);
+    */
 
     str = getFileContent("../disp/box_id");
     this->ui->label_boxid->setText(str);
+
+    str = getFileContent("../disp/version.update");
+    this->ui->label_version_number->setText(str);
 
     str = getFileContent("../disp/upload");
     this->ui->label_ftp->setText(str);
