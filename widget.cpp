@@ -120,7 +120,7 @@ void Widget::updateDisplay()
     str = getFileContent("../disp/box_id");
     this->ui->label_boxid->setText(str);
 
-    str = getFileContent("../disp/version.update");
+    str = getFileContent("../disp/model.config.version");
     this->ui->label_version_number->setText(str);
 
     str = getFileContent("../disp/upload");
@@ -162,7 +162,7 @@ QString Widget::getFileContent(QString filename)
     //qDebug() << filename ;
     if(!f.open(QIODevice::ReadOnly ))
     {
-        qDebug() << "failed to open" << filename << '\n';
+        //qDebug() << "failed to open" << filename << '\n';
         return NULL;
     }
     QString data = f.readAll();

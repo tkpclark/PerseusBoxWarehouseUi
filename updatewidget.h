@@ -16,16 +16,18 @@ public:
     ~UpdateWidget();
     void initDisplay();
     QString getFileContent(QString);
+    void jumpToHome();
+    bool updateFinished();
     
 private slots:
     void on_pushButton_clicked();
-    void on_pushButton_2_clicked();
 
 public slots:
     void updateDisplay();
 
 private:
     Ui::UpdateWidget *ui;
+    QString update_run;
 };
 
 #endif // UPDATEWIDGET_H

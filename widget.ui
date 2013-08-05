@@ -279,7 +279,7 @@ font: 30pt &quot;Lucida Grande&quot;;</string>
        <widget class="QLabel" name="label_version_text">
         <property name="geometry">
          <rect>
-          <x>85</x>
+          <x>65</x>
           <y>50</y>
           <width>121</width>
           <height>21</height>
@@ -292,9 +292,9 @@ font: 30pt &quot;Lucida Grande&quot;;</string>
        <widget class="QLabel" name="label_version_number">
         <property name="geometry">
          <rect>
-          <x>210</x>
+          <x>190</x>
           <y>50</y>
-          <width>71</width>
+          <width>91</width>
           <height>21</height>
          </rect>
         </property>

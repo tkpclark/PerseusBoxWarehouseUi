@@ -2,6 +2,7 @@
 #include "ui_updatewidget.h"
 #include "widget.h"
 #include <QMessageBox>
+#include <QFile>
 
 UpdateWidget::UpdateWidget(QWidget *parent) :
     QWidget(parent),
@@ -9,6 +10,8 @@ UpdateWidget::UpdateWidget(QWidget *parent) :
 {
     ui->setupUi(this);
     //ui->pushButton->setEnabled(false);
+
+    this->update_run = "../disp/update.run";
 
     initDisplay();
 }
@@ -33,11 +36,43 @@ void UpdateWidget::on_pushButton_clicked()
     w->show();
 
 }
+void UpdateWidget::jumpToHome()
+{
+    Widget *w = new Widget();
+
+    w->setWindowFlags(Qt::FramelessWindowHint);
+    w->show();
+
+    //this->hide();
+    this->destroy(true,true);
+
+    QFile::remove(this->update_run);
+}
+bool UpdateWidget::updateFinished()
+{
+
+    //qDebug() << "run:" << this->getFileContent(this->update_run).left(1);
+    if(this->getFileContent(this->update_run).left(1) == "1")
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+
 void UpdateWidget::updateDisplay()
 {
     QString str;
     str = getFileContent("../disp/box_status");
     this->ui->label_info->setText(str);
+
+    if(updateFinished())
+    {
+
+        this->jumpToHome();
+    }
 }
 QString UpdateWidget::getFileContent(QString filename)
 {
@@ -46,7 +81,7 @@ QString UpdateWidget::getFileContent(QString filename)
     //qDebug() << filename ;
     if(!f.open(QIODevice::ReadOnly ))
     {
-        qDebug() << "failed to open" << filename << '\n';
+        //qDebug() << "failed to open" << filename << '\n';
         return NULL;
     }
     QString data = f.readAll();
@@ -57,7 +92,4 @@ QString UpdateWidget::getFileContent(QString filename)
     return data;
 }
 
-void UpdateWidget::on_pushButton_2_clicked()
-{
-    QMessageBox::about(this,"shit","what");
-}
+
