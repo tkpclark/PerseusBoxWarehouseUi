@@ -80,7 +80,24 @@ void Widget::updateSDcardDisplay()
         this->ui->label_pic_sdcard->setStyleSheet("background-image: url(:/pics/sd_out.png);background-repeat:no-repeat;");
     }
 }
+QString Widget::getLocalIPAddress()
+{
+         QString vAddress;
 
+         QList<QHostAddress> vAddressList = QNetworkInterface::allAddresses();
+         for(int i = 0; i < vAddressList.size(); i++)
+         {
+                   if(!vAddressList.at(i).isNull() &&
+                            vAddressList.at(i) != QHostAddress::LocalHost &&
+                            vAddressList.at(i).protocol() ==  QAbstractSocket::IPv4Protocol)
+                   {
+                            vAddress = vAddressList.at(i).toString();
+                            break;
+                   }
+         }
+
+         return vAddress;
+}
 void Widget::updateDisplay()
 {
 
@@ -100,8 +117,9 @@ void Widget::updateDisplay()
     //qDebug() << str << '\n';
 
 
-    str = getFileContent("../disp/ip");
-    this->ui->label_ip->setText(str);
+    //str = getFileContent("../disp/ip");
+
+    this->ui->label_ip->setText(this->getLocalIPAddress());
 
     str = getFileContent("../disp/mac");
     this->ui->label_mac->setText(str);

@@ -285,6 +285,10 @@ font: 30pt &quot;Lucida Grande&quot;;</string>
           <height>21</height>
          </rect>
         </property>
+        <property name="styleSheet">
+         <string notr="true">color:rgb(252, 254, 253);
+font: 9pt &quot;Lucida Grande&quot;;</string>
+        </property>
         <property name="text">
          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;配置文件版本号:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
         </property>
@@ -303,6 +307,10 @@ font: 30pt &quot;Lucida Grande&quot;;</string>
           <pointsize>9</pointsize>
          </font>
         </property>
+        <property name="styleSheet">
+         <string notr="true">color:rgb(252, 254, 253);
+font: 9pt &quot;Lucida Grande&quot;;</string>
+        </property>
         <property name="text">
          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;000&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
         </property>
@@ -315,7 +323,7 @@ font: 30pt &quot;Lucida Grande&quot;;</string>
      <item row="0" column="3" colspan="2">
       <widget class="QWidget" name="widget_11" native="true">
        <property name="styleSheet">
-        <string notr="true">background-color:rgb(30,3030)</string>
+        <string notr="true">background-color:rgb(30,30,30)</string>
        </property>
       </widget>
      </item>
@@ -392,6 +400,29 @@ font: 9pt &quot;Lucida Grande&quot;;</string>
     </property>
     <property name="text">
      <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_version">
+    <property name="geometry">
+     <rect>
+      <x>362</x>
+      <y>20</y>
+      <width>71</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:rgb(252, 254, 253);
+font: 9pt &quot;Lucida Grande&quot;;</string>
+    </property>
+    <property name="text">
+     <string>0.35</string>
+    </property>
+    <property name="scaledContents">
+     <bool>false</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
     </property>
    </widget>
   </widget>

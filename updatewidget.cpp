@@ -66,7 +66,9 @@ void UpdateWidget::updateDisplay()
 {
     QString str;
     str = getFileContent("../disp/box_status");
+    //str = getFileContent("/Users/clark/tmp/box_status");
     this->ui->label_info->setText(str);
+    //this->ui->label_info->setStyleSheet("color:rgb(255, 255, 255);font: 9pt \"Lucida Grande\";");
 
     if(updateFinished())
     {

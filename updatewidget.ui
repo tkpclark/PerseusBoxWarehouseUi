@@ -52,11 +52,15 @@ font: 75 italic 16pt &quot;Courier&quot;;</string>
   <widget class="QLabel" name="label_info">
    <property name="geometry">
     <rect>
-     <x>120</x>
+     <x>210</x>
      <y>100</y>
-     <width>551</width>
+     <width>371</width>
      <height>281</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:rgb(163, 163, 163);
+font: 9pt &quot;Lucida Grande&quot;;</string>
    </property>
    <property name="text">
     <string/>

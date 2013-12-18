@@ -23,6 +23,7 @@ public:
     void updateNetworkDisplay();
     void updateSDcardDisplay();
     bool isSdcardInserted();
+    QString getLocalIPAddress();
 public slots:
     void updateDisplay();
 
