@@ -35,16 +35,7 @@
      </rect>
     </property>
     <layout class="QGridLayout" name="gridLayout">
-     <property name="leftMargin">
-      <number>6</number>
-     </property>
-     <property name="topMargin">
-      <number>6</number>
-     </property>
-     <property name="rightMargin">
-      <number>6</number>
-     </property>
-     <property name="bottomMargin">
+     <property name="margin">
       <number>6</number>
      </property>
      <property name="spacing">
@@ -304,7 +295,11 @@ font: 9pt &quot;Lucida Grande&quot;;</string>
         </property>
         <property name="font">
          <font>
+          <family>Lucida Grande</family>
           <pointsize>9</pointsize>
+          <weight>50</weight>
+          <italic>false</italic>
+          <bold>false</bold>
          </font>
         </property>
         <property name="styleSheet">
@@ -343,7 +338,7 @@ font: 9pt &quot;Lucida Grande&quot;;</string>
 font: 75 italic 16pt &quot;Courier&quot;;</string>
     </property>
     <property name="text">
-     <string>Perseus</string>
+     <string>Perseus1</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_boxid">
