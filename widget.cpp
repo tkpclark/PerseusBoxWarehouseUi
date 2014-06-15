@@ -188,5 +188,5 @@ QString Widget::getFileContent(QString filename)
     //qDebug() << f.readLine() << '\n';
     f.close();
 
-    return data;
+    return data.trimmed();
 }
